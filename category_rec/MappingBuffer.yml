@@ -1,0 +1,34 @@
+DATABASE:
+  HOST: postgresdemotwo.c3yxphqgag3s.ap-southeast-1.rds.amazonaws.com
+  NAME: postgresdemotwo
+  PASSWORD: clientdemo4
+  PORT: '5432'
+  USER: clientdemo4
+column_map:
+  PRODUCT_MASTER:
+    product_id: prod_id
+    category: category
+    sub_category: sub_category
+  TRANSACTION_MASTER:
+    cust_id: id
+    product_id: prod_id
+    category: category
+    quantity: purchasequantity
+    timestamp: date
+is_factor:
+  CUSTOMER_CONTACT:
+  - sent
+  CUSTOMER_MASTER:
+  - education
+  - os_type
+  - facebook_id
+  - country_code
+  - job
+  - age
+  - gender
+  CUSTOMER_SECONDARY: []
+  EVENT_LOG: []
+  TRANSACTION_MASTER: []
+table_map:
+  TRANSACTION_MASTER: trans
+  PRODUCT_MASTER: prod_master

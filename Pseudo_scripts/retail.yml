@@ -1,0 +1,39 @@
+DATABASE:
+  HOST: localhost
+  NAME: postgres_db
+  PASSWORD: admin
+  PORT: '5432'
+  USER: postgres_user
+client_meta:
+  mapping:
+    retail:
+      columns:
+      - colname: InvoiceNo
+        coltype: TEXT
+      - colname: StockCode
+        coltype: TEXT
+      - colname: Description
+        coltype: TEXT
+      - colname: Quantity
+        coltype: INTEGER
+      - colname: InvoiceDate
+        coltype: TEXT
+      - colname: UnitPrice
+        coltype: FLOAT
+      - colname: CustomerID
+        coltype: INTEGER
+      - colname: Country
+        coltype: TEXT
+  mapping_type: RDB
+column_map:
+  TRANSACTION_MASTER:
+    cust_id: CustomerID
+    product_id: StockCode
+    revenue: UnitPrice
+    timestamp: InvoiceDate
+filters:
+  TRANSACTION_MASTER: {}
+is_factor:
+  TRANSACTION_MASTER: []
+table_map:
+  TRANSACTION_MASTER: retail

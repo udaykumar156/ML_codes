@@ -1,0 +1,51 @@
+DATABASE:
+  HOST: localhost
+  NAME: postgres_db
+  PASSWORD: admin
+  PORT: '5432'
+  USER: postgres_user
+client_meta:
+  mapping:
+    trans:
+      columns:
+      - colname: id
+        coltype: TEXT
+      - colname: chain
+        coltype: INTEGER
+      - colname: dept
+        coltype: INTEGER
+      - colname: category
+        coltype: INTEGER
+      - colname: company
+        coltype: TEXT
+      - colname: brand
+        coltype: INTEGER
+      - colname: date
+        coltype: TEXT
+      - colname: productsize
+        coltype: FLOAT
+      - colname: productmeasure
+        coltype: TEXT
+      - colname: purchasequantity
+        coltype: INTEGER
+      - colname: purchaseamount
+        coltype: FLOAT
+      - colname: prod_id
+        coltype: TEXT
+  mapping_type: RDB
+column_map:
+  TRANSACTION_MASTER:
+    cust_id: id
+    product_id: prod_id
+    quantity: purchasequantity
+    revenue: purchaseamount
+    timestamp: date
+filters:
+  TRANSACTION_MASTER: {}
+is_factor:
+  TRANSACTION_MASTER:
+  - dept
+  - category
+  - company
+table_map:
+  TRANSACTION_MASTER: trans

@@ -1,0 +1,62 @@
+DATABASE:
+  HOST: demo.tuple-mia.com
+  NAME: postgres_db
+  PASSWORD: admin
+  PORT: '5432'
+  USER: postgres_user
+column_map:
+  CUSTOMER_CONTACT:
+    cust_id: id
+    email_id: email
+    facebook_id: facebook_id
+    firstname: first_name
+    lastname: last_name
+    phone_number: phone
+  CUSTOMER_MASTER:
+    birthday: birthday
+    create_date: create_date
+    cust_id: id
+  CUSTOMER_SECONDARY:
+    cust_id: cust_id
+  EVENT_LOG:
+    action_type: actiontype
+    cust_id: from_id
+    product_id: to_id
+    timestamp: timestamp
+  EVENT_MASTER:
+    action_category_id: null
+    action_category_name: null
+    action_name: action_desc
+    action_type: actiontype
+  TRANSACTION_MASTER:
+    cust_id: userid
+    product_id: product_id
+    quantity: quantity
+    renewal: renewal
+    revenue: revenue
+    timestamp: purchase_date
+is_factor:
+  CUSTOMER_CONTACT:
+  - phone
+  - facebook_id
+  CUSTOMER_MASTER:
+  - deleted
+  - gender
+  - job
+  - country_code
+  - facebook_id
+  - os_type
+  - education
+  - client_version
+  EVENT_LOG: []
+  EVENT_MASTER:
+  - actiontype
+  TRANSACTION_MASTER:
+  - platform
+table_map:
+  CUSTOMER_CONTACT: contact
+  CUSTOMER_MASTER: users
+  CUSTOMER_SECONDARY: temp_customer_secondary
+  EVENT_LOG: event
+  EVENT_MASTER: event_master
+  TRANSACTION_MASTER: trans
