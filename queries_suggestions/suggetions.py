@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 
 from mapping import doc
 
-engine = create_engine('postgresql://postgres_user:admin@paktortest.tuple-mia.com:5432/postgres_db')
+engine = create_engine('*************************************************************')
 
 import pandas as pd
 
