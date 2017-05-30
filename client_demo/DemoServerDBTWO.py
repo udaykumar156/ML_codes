@@ -6,12 +6,12 @@ class ConnectDatabase:
         self.cur = None
         try:
             self.conn = psycopg2.connect(
-                database='postgres_trans',
-                user='client3',
-                password='client333',
-                host='postgres-trans.c3yxphqgag3s.ap-southeast-1.rds.amazonaws.com',
-                port='5432',
-                sslmode='require'
+                database='****',
+                user='*****',
+                password='*********',
+                host='***************',
+                port='********',
+                sslmode='***********'
             )
             self.cur = self.conn.cursor()
         except Exception as e:
