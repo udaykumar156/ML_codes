@@ -8,7 +8,7 @@ from sqlalchemy import create_engine
 
 # In[2]:
 
-engine = create_engine('postgresql://postgres_user:admin@paktortest.tuple-mia.com:5432/postgres_db')
+engine = create_engine('*********************************************************')
 
 
 # In[3]:
