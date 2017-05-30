@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-engine = create_engine('postgresql://postgres_user:admin@localhost:5432/postgres_db')
+engine = create_engine('************************************************************')
 
 import pandas as pd
 master_table = pd.read_sql_table(table_name="master_table", con=engine)
