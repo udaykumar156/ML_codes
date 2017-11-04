@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 import pandas as pd
-engine = create_engine('postgresql://postgres_user:admin@paktortest.tuple-mia.com:5432/postgres_db')
+engine = create_engine('***********************************')
 trigger_table = pd.read_sql_table(table_name="trigger_campaign_details", con=engine)
 experiment_table = pd.read_sql_table(table_name="experiment_campaign_log", con=engine)
 master_table = pd.read_sql_table(table_name="master_table", con=engine)
